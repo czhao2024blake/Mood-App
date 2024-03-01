@@ -282,15 +282,31 @@ final class Project1MOODAPPTests: XCTestCase {
         let analyzer = StringAnalysis()
         
         //when
-        let tokens = analyzer.categorizeValue(99)
-        
+        let tokens = analyzer.doEverything(inputText: "alert")
         //Then
-        XCTAssertEqual(tokens, "Strongly Positive")
+        XCTAssertEqual(tokens, "Positive")
         
         
         
         
     }
+    
+    func testEverything(){
+        
+        //given
+        let analyzer = StringAnalysis()
+        
+        //when
+        let tokens = analyzer.doEverything(inputText: "alert")
+        
+        //Then
+        XCTAssertEqual(tokens, "Positive")
+        
+        
+        
+        
+    }
+
     
     
     }
