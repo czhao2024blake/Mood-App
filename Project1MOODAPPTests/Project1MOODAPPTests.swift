@@ -303,7 +303,23 @@ final class Project1MOODAPPTests: XCTestCase {
         XCTAssertEqual(tokens, "Positive")
         
         
+    }
+    
+    func testQuote(){
+        //given
+        let analyzer = StringAnalysis()
         
+        //when
+        let tokens = analyzer.returnQuote("Positive")
+        
+        let positiveQuotes = ["You've got that glow of someone who's found their flow. Keep riding this wave of positivity and see where it takes you.",
+                              "Your positive mindset is your ticket to every adventure. Stay open, stay curious, and watch the universe align for you.",
+                              "Every step forward is a step towards your dreams. Keep moving with this positive momentum!",
+                              "Positivity is your superpower, turning everyday moments into magic. Keep weaving this magic into your life.",
+                              "The seeds of positivity you plant today will bloom into tomorrow's joys. Keep nurturing your garden of positivity."]
+    
+        //Then
+        XCTAssertTrue(positiveQuotes.contains(tokens))
         
     }
 
